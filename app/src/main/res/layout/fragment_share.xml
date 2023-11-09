@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_containerSA"
+    tools:context=".ShareFragment">
+
+    <!-- Icône de vélo -->
+
+    <!-- Texte associé à l'icône -->
+
+    <ImageView
+        android:id="@+id/icon_bike"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:contentDescription="Icône de vélo"
+        android:src="@drawable/baseline_directions_bike_24"
+        android:translationX="80dp"
+        android:translationY="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_bike"
+        android:layout_marginTop="223dp"
+        android:text="Véhicules Fragment"
+        android:textColor="@color/ma_couleur"
+        android:textSize="30sp"
+        android:translationX="100dp"
+        android:translationY="100dp" />
+
+</FrameLayout>
