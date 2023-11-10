@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_about:
                         loadFragment(new AboutFragment());
                         return true;
+                    case R.id.nav_blog:
+                        loadFragment(new BlogFragment());
+                        return true;
                     default:
                         return false;
                 }

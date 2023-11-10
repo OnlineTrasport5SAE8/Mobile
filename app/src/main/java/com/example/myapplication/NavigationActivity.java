@@ -50,6 +50,12 @@ public class NavigationActivity extends AppCompatActivity {
                                 .replace(R.id.fragment_containerA, aboutFragment)
                                 .commit();
                         return true;
+                    case R.id.nav_blog:
+                        BlogFragment blogFragment = new BlogFragment();
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_containerBl, blogFragment)
+                                .commit();
+                        return true;
                 }
                 return false;
             });

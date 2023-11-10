@@ -20,5 +20,9 @@
         android:icon="@drawable/nav_about"
         android:title="About Us"/>
 
+    <item
+        android:id="@+id/nav_blog"
+        android:icon="@drawable/nav_blog"
+        android:title="Blog"/>
 
 </menu>
