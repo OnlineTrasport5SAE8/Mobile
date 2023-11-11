@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,30 +25,57 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:background="@android:color/holo_blue_light">
 
-            <!-- Post Author -->
-            <TextView
-                android:id="@+id/textViewPostAuthor1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alice Doe"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+            <!-- Circular image for Post Author 1 -->
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
 
-            <!-- Post Content -->
-            <TextView
-                android:id="@+id/textViewPostContent1"
-                android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/imageViewPostAuthor1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_background"
+                    android:src="@drawable/alice_doe_image"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"/> <!-- Circular background drawable -->
+
+            </FrameLayout>
+
+            <!-- Vertical LinearLayout for Post Author details -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="I had an amazing ride today! The driver was friendly, and the car was comfortable. #HappyCustomer"
-                android:textSize="18sp"
-                android:textStyle="italic"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <!-- Post Author -->
+                <TextView
+                    android:id="@+id/textViewPostAuthor1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alice Doe"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <!-- Post Content -->
+                <TextView
+                    android:id="@+id/textViewPostContent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I had an amazing ride today! The driver was friendly, and the car was comfortable. #HappyCustomer"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
 
         </LinearLayout>
+
 
         <!-- Comments for Post 1 -->
         <LinearLayout
@@ -88,28 +115,53 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:background="@android:color/holo_blue_light">
 
-            <!-- Post Author -->
-            <TextView
-                android:id="@+id/textViewPostAuthor2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bob Johnson"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+            <!-- Circular image for Post Author 2 -->
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
 
-            <!-- Post Content -->
-            <TextView
-                android:id="@+id/textViewPostContent2"
-                android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/imageViewPostAuthor2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bob_johnson_image"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_background"/> <!-- Circular background drawable -->
+
+            </FrameLayout>
+
+            <!-- Vertical LinearLayout for Post Author details -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Just had the quickest ride ever! The driver was so efficient. #Impressed"
-                android:textSize="18sp"
-                android:textStyle="italic"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <!-- Post Author -->
+                <TextView
+                    android:id="@+id/textViewPostAuthor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bob Johnson"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <!-- Post Content -->
+                <TextView
+                    android:id="@+id/textViewPostContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Just had the quickest ride ever! The driver was so efficient. #Impressed"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -151,28 +203,53 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:background="@android:color/holo_blue_light">
 
-            <!-- Post Author -->
-            <TextView
-                android:id="@+id/textViewPostAuthor3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sophie Adams"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+            <!-- Circular image for Post Author 3 -->
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
 
-            <!-- Post Content -->
-            <TextView
-                android:id="@+id/textViewPostContent3"
-                android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/imageViewPostAuthor3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sophie_adams_imag"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_background"/> <!-- Circular background drawable -->
+
+            </FrameLayout>
+
+            <!-- Vertical LinearLayout for Post Author details -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Had a great ride with the most friendly driver. 5 stars! #TopService"
-                android:textSize="18sp"
-                android:textStyle="italic"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <!-- Post Author -->
+                <TextView
+                    android:id="@+id/textViewPostAuthor3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sophie Adams"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <!-- Post Content -->
+                <TextView
+                    android:id="@+id/textViewPostContent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Had a great ride with the most friendly driver. 5 stars! #TopService"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -187,7 +264,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jack Miller: That's fantastic!"/>
-
 
             <!-- Comment 2 -->
             <TextView
@@ -215,28 +291,53 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:background="@android:color/holo_blue_light">
 
-            <!-- Post Author -->
-            <TextView
-                android:id="@+id/textViewPostAuthor4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Charlie Williams"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+            <!-- Circular image for Post Author 4 -->
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
 
-            <!-- Post Content -->
-            <TextView
-                android:id="@+id/textViewPostContent4"
-                android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/imageViewPostAuthor4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/charlie_williams_image"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_background"/> <!-- Circular background drawable -->
+
+            </FrameLayout>
+
+            <!-- Vertical LinearLayout for Post Author details -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="The app's new update is amazing! The user interface is so smooth and easy to navigate. #GreatImprovement"
-                android:textSize="18sp"
-                android:textStyle="italic"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <!-- Post Author -->
+                <TextView
+                    android:id="@+id/textViewPostAuthor4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charlie Williams"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <!-- Post Content -->
+                <TextView
+                    android:id="@+id/textViewPostContent4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The app's new update is amazing! The user interface is so smooth and easy to navigate. #GreatImprovement"
+                    android:textSize="18sp"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -258,7 +359,6 @@
                 android:layout_height="wrap_content"
                 android:text="Sophie Evans: It's much better than before."/>
 
-
         </LinearLayout>
 
         <!-- Add more posts and comments as needed -->
@@ -279,7 +379,6 @@
             android:textColor="@color/ma_couleur"
             android:layout_marginTop="8dp"/>
 
-
         <Button
             android:id="@+id/buttonPostCommentt"
             android:layout_width="wrap_content"
@@ -287,7 +386,6 @@
             android:layout_marginTop="8dp"
             android:text="Post Comment"
             android:layout_gravity="end"
-
             android:layout_marginEnd="40dp"
             android:textColor="@color/ma_couleur" />
     </LinearLayout>
