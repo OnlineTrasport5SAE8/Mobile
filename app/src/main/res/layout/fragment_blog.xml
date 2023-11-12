@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/fragment_containerBl"
+
+        android:background="@color/ma_couleur5"
         android:padding="16dp">
 
         <!-- Forum Title -->
@@ -16,19 +19,23 @@
             android:id="@+id/textViewForumTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/ma_couleur"
             android:text="Community Blog"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:gravity="center"/>
 
         <!-- Post 1 -->
         <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
-            android:background="@android:color/holo_blue_light">
+            android:background="@drawable/rounded_corners"
+            >
 
             <!-- Circular image for Post Author 1 -->
             <FrameLayout
@@ -39,10 +46,9 @@
                     android:id="@+id/imageViewPostAuthor1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/circle_background"
                     android:src="@drawable/alice_doe_image"
                     android:scaleType="centerCrop"
-                    android:layout_gravity="center"/> <!-- Circular background drawable -->
+                    android:background="@drawable/circle_background" /><!-- Circular background drawable -->
 
             </FrameLayout>
 
@@ -60,6 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Alice Doe"
+                    android:textColor="@color/ma_couleur"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
 
@@ -68,9 +75,11 @@
                     android:id="@+id/textViewPostContent1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/ma_couleur5"
                     android:text="I had an amazing ride today! The driver was friendly, and the car was comfortable. #HappyCustomer"
                     android:textSize="18sp"
                     android:textStyle="italic"/>
+
 
             </LinearLayout>
 
@@ -81,19 +90,42 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Comments:"
+                android:textColor="@color/ma_couleur"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@color/ma_couleur3"/>
 
             <!-- Comment 1 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="John Doe: Glad to hear that!"/>
+                android:text="   John Doe: Glad to hear that!"
+                android:background="@color/ma_couleur3"
+
+                />
 
             <!-- Comment 2 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jane Smith: I also had a great experience recently."/>
+                android:text="   Jane Smith: I also had a great experience recently."
+
+                android:background="@color/ma_couleur3"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/rounded_corners2"
+                />
+
             <EditText
                 android:id="@+id/editTextComment2"
                 android:layout_width="match_parent"
@@ -101,13 +133,7 @@
                 android:hint="Add a comment..."
                 android:layout_marginTop="8dp"/>
 
-            <Button
-                android:id="@+id/buttonPostComment2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Post Comment"
-                android:textColor="@color/ma_couleur"
-                android:layout_marginTop="8dp"/>
+
 
         </LinearLayout>
 
@@ -118,7 +144,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
-            android:background="@android:color/holo_blue_light">
+            android:background="@drawable/rounded_corners">
 
             <!-- Circular image for Post Author 2 -->
             <FrameLayout
@@ -135,6 +161,7 @@
 
             </FrameLayout>
 
+
             <!-- Vertical LinearLayout for Post Author details -->
             <LinearLayout
                 android:layout_width="0dp"
@@ -143,11 +170,13 @@
                 android:orientation="vertical"
                 android:layout_marginStart="8dp">
 
+
                 <!-- Post Author -->
                 <TextView
                     android:id="@+id/textViewPostAuthor2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/ma_couleur"
                     android:text="Bob Johnson"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
@@ -159,11 +188,22 @@
                     android:layout_height="wrap_content"
                     android:text="Just had the quickest ride ever! The driver was so efficient. #Impressed"
                     android:textSize="18sp"
-                    android:textStyle="italic"/>
+                    android:textStyle="italic"
+                    android:textColor="@color/ma_couleur5"
+                    />
 
             </LinearLayout>
 
+
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Comments:"
+            android:textColor="@color/ma_couleur"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/ma_couleur3"/>
 
         <!-- Comments for Post 2 -->
         <LinearLayout
@@ -175,13 +215,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Emma White: That's awesome!"/>
+                android:background="@color/ma_couleur3"
+                android:text="   Emma White: That's awesome!"/>
 
             <!-- Comment 2 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alex Turner: I had a similar experience last week."/>
+                android:text="   Alex Turner: I had a similar experience last week."
+                android:background="@color/ma_couleur3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/rounded_corners2"
+                />
             <EditText
                 android:id="@+id/editTextCommenttttt"
                 android:layout_width="match_parent"
@@ -189,13 +237,7 @@
                 android:hint="Add a comment..."
                 android:layout_marginTop="8dp"/>
 
-            <Button
-                android:id="@+id/buttonPostCommenttttt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Post Comment"
-                android:textColor="@color/ma_couleur"
-                android:layout_marginTop="8dp"/>
+
 
         </LinearLayout>
 
@@ -206,7 +248,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
-            android:background="@android:color/holo_blue_light">
+            android:background="@drawable/rounded_corners">
 
             <!-- Circular image for Post Author 3 -->
             <FrameLayout
@@ -237,6 +279,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sophie Adams"
+                    android:textColor="@color/ma_couleur"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
 
@@ -247,7 +290,8 @@
                     android:layout_height="wrap_content"
                     android:text="Had a great ride with the most friendly driver. 5 stars! #TopService"
                     android:textSize="18sp"
-                    android:textStyle="italic"/>
+                    android:textStyle="italic"
+                    android:textColor="@color/ma_couleur5"/>
 
             </LinearLayout>
 
@@ -258,18 +302,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Comments:"
+                android:textColor="@color/ma_couleur"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@color/ma_couleur3"/>
             <!-- Comment 1 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jack Miller: That's fantastic!"/>
+                android:background="@color/ma_couleur3"
+                android:text="   Jack Miller: That's fantastic!"/>
 
             <!-- Comment 2 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lily Brown: I need to try this service!"/>
+                android:background="@color/ma_couleur3"
+                android:text="   Lily Brown: I need to try this service!"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/rounded_corners2"
+                />
             <EditText
                 android:id="@+id/editTextCommenttt"
                 android:layout_width="match_parent"
@@ -277,13 +336,7 @@
                 android:hint="Add a comment..."
                 android:layout_marginTop="8dp"/>
 
-            <Button
-                android:id="@+id/buttonPostCommenttt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Post Comment"
-                android:textColor="@color/ma_couleur"
-                android:layout_marginTop="8dp"/>
+
 
         </LinearLayout>
 
@@ -294,7 +347,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="16dp"
-            android:background="@android:color/holo_blue_light">
+            android:background="@drawable/rounded_corners">
 
             <!-- Circular image for Post Author 4 -->
             <FrameLayout
@@ -325,6 +378,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Charlie Williams"
+                    android:textColor="@color/ma_couleur"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
 
@@ -335,7 +389,8 @@
                     android:layout_height="wrap_content"
                     android:text="The app's new update is amazing! The user interface is so smooth and easy to navigate. #GreatImprovement"
                     android:textSize="18sp"
-                    android:textStyle="italic"/>
+                    android:textStyle="italic"
+                    android:textColor="@color/ma_couleur5"/>
 
             </LinearLayout>
 
@@ -346,20 +401,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Comments:"
+                android:textColor="@color/ma_couleur"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@color/ma_couleur3"/>
             <!-- Comment 1 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="David Johnson: I noticed that too!"/>
+                android:background="@color/ma_couleur3"
+                android:text="   David Johnson: I noticed that too!"/>
 
             <!-- Comment 2 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sophie Evans: It's much better than before."/>
+                android:background="@color/ma_couleur3"
+                android:text="   Sophie Evans: It's much better than before."/>
 
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="@drawable/rounded_corners2"
+            />
 
         <!-- Add more posts and comments as needed -->
 
@@ -371,13 +441,7 @@
             android:hint="Add a comment..."
             android:layout_marginTop="8dp"/>
 
-        <Button
-            android:id="@+id/buttonPostComment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Post Comment"
-            android:textColor="@color/ma_couleur"
-            android:layout_marginTop="8dp"/>
+
 
         <Button
             android:id="@+id/buttonPostCommentt"
